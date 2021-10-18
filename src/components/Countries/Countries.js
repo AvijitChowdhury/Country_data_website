@@ -14,12 +14,17 @@ const Countries = () => {
         .catch(error=>console.log(error))
     },[])
     console.log(countries);
+  
     return (
+    <div> 
+        <h2 style={{textAlign:'center'}}>Country loaded : {countries.length}</h2>
         <div className="container">
+            
             {
                 countries.map(country=><Country {...country}></Country>)
             }
         </div>
+    </div>    
     );
 };
 
